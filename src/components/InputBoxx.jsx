@@ -25,7 +25,7 @@ function InputBox({
                     type="number"
                     placeholder="Amount"
                     disabled={amountDisable}
-                    value={amount}
+                    value={amount === 0 ? '' : amount}
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                 />
             </div>
