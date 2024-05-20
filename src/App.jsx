@@ -14,6 +14,7 @@ function App() {
     const swap = () => {
         setFrom(to);
         setTo(from);
+
         // No need to set amounts here, just swap currencies
     };
 
@@ -72,7 +73,7 @@ function App() {
                             />
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                            Convert {from.toUpperCase()} to {to.toUpperCase()}
+                            Converted {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
                     </form>
                 </div>
