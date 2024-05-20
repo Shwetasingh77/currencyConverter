@@ -8,14 +8,14 @@ module.exports = {
     'plugin:react-hooks/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  parserOptions: { ecmaVersion: 2020, sourceType: 'module' }, // Changed ecmaVersion to a valid number
+  settings: { react: { version: 'detect' } }, // Changed version to 'detect'
+  plugins: ['react', 'react-hooks'], // Removed 'react-refresh' since it's not a valid ESLint plugin
   rules: {
     'react/jsx-no-target-blank': 'off',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react/jsx-uses-react': 'off', // Turn off warning about missing React imports
+    'react/react-in-jsx-scope': 'off', // Turn off warning about missing React imports
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-}
+};

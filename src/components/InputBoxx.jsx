@@ -1,6 +1,6 @@
 import React, {useId} from 'react'
 
-function InputBoxx({
+function InputBox({
     label,
     amount,
     onAmountChange,
@@ -20,7 +20,7 @@ function InputBoxx({
                     {label}
                 </label>
                 <input
-                    htmlFor={amountInputId}
+                    id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
@@ -37,17 +37,17 @@ function InputBoxx({
                     onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
                     disabled={currencyDisable}
                 >
-
+                    
                         {currencyOptions.map((currency) => (
                             <option key={currency} value={currency}>
                             {currency}
                             </option>
                         ))}
-
+                
                 </select>
             </div>
         </div>
     );
 }
 
-export default InputBoxx;
+export default InputBox;
