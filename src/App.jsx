@@ -19,15 +19,12 @@ function App() {
     };
 
     const convert = () => {
-        if (currencyInfo[to]) {
+       
             setConvertedAmount(amount * currencyInfo[to]);
-        }
+        
     };
 
-    useEffect(() => {
-        convert(); // Automatically convert when `amount`, `from`, or `to` changes
-    }, [amount, from, to, currencyInfo]);
-
+   
     return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -73,7 +70,7 @@ function App() {
                             />
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                            Converted {from.toUpperCase()} to {to.toUpperCase()}
+                            Convert {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
                     </form>
                 </div>
