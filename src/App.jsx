@@ -14,7 +14,8 @@ function App() {
     const swap = () => {
         setFrom(to);
         setTo(from);
-
+        setConvertedAmount(amount)
+        setAmount(convertedAmount)
         // No need to set amounts here, just swap currencies
     };
 
